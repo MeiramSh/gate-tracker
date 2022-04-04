@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 
 const app = express()
 
-const PORT = process.env.port || 5000
+const PORT = process.env.PORT || 5000
 
 const publicVapidKey = 'BB4HYa1ZLggzGWtKTmvfALPW9sWuFhrjFNZ-5g7YN_Sp5118sWXY5i22GLh5yj9RDVcDTU-x88jNZYBij0HaI84'
 const privateVapidKey = 'filYXFJnCKhYcz79gUKSYvzdrEX_-0nIh37uSMDnWxg'
