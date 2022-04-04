@@ -1,18 +1,20 @@
 import express from 'express'
+import path from 'path'
 
 const app = express()
-app.use(express.json())
 
+const PORT = process.env.port
 let state = false
-let port = process.env.PORT
-if (port == null || port == "") {
-    port = 8000
-}
 
-app.listen(port)
+app.use(express.json())
+app.listen(PORT || 8000)
 
-app.get('/', (req, res) => res.send({ state: state }))
-app.post('/', (req, res) => {
+app.get('/', function (_, res) {
+    res.sendFile(path.join(__dirname, '/index.html'))
+})
+
+app.get('/api', (_, res) => res.send({ state: state }))
+app.post('/api', (req, res) => {
     state = req.body.state
     res.send({ state: state })
 })
