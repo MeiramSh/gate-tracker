@@ -3,12 +3,12 @@ import path from 'path'
 
 const app = express()
 
-const PORT = process.env.port
+const PORT = process.env.port || 8000
 let state = false
 
 app.use(express.json())
-app.listen(PORT || 8000)
-
+app.listen(PORT)
+console.log('Server started at http://localhost:' + PORT);
 app.get('/', function (_, res) {
     res.sendFile(path.join(__dirname, '/index.html'))
 })
