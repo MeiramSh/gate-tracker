@@ -48,6 +48,7 @@ app.post('/subscribe', (req, res) => {
     subscriptions.forEach(element => {
         console.log(element)
     })
+    console.log('subscription requested')
     //const payload = JSON.stringify({ title: 'Gate Status' })
 
     // webpush.sendNotification(subscription, payload).catch(err => console.log(err))
