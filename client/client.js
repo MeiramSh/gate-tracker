@@ -1,4 +1,6 @@
 const publicVapidKey = 'BB4HYa1ZLggzGWtKTmvfALPW9sWuFhrjFNZ-5g7YN_Sp5118sWXY5i22GLh5yj9RDVcDTU-x88jNZYBij0HaI84'
+var element = document.getElementById('subscribe')
+element.addEventListener('click', subscribe, false)
 function subscribe() {
     if ('serviceWorker' in navigator) {
         send().catch(err => console.log(err))
