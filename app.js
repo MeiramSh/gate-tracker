@@ -7,7 +7,7 @@ import webpush from 'web-push'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-var subscriptions = []
+const subscriptions = new Set()
 
 function notifyAll() {
     subscriptions.forEach(element => {
@@ -24,7 +24,6 @@ const publicVapidKey = 'BB4HYa1ZLggzGWtKTmvfALPW9sWuFhrjFNZ-5g7YN_Sp5118sWXY5i22
 const privateVapidKey = 'filYXFJnCKhYcz79gUKSYvzdrEX_-0nIh37uSMDnWxg'
 
 let state = false
-let subscription = {}
 webpush.setVapidDetails('mailto:test@test.com', publicVapidKey, privateVapidKey)
 
 app.use(express.json())
@@ -44,11 +43,11 @@ app.post('/api', (req, res) => {
 })
 
 app.post('/subscribe', (req, res) => {
-    subscriptions.push(req.body)
+    subscriptions.add(req.body)
     res.status(201).json({})
     subscriptions.forEach(element => {
         console.log(element)
-    });
+    })
     //const payload = JSON.stringify({ title: 'Gate Status' })
 
     // webpush.sendNotification(subscription, payload).catch(err => console.log(err))
