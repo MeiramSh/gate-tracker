@@ -7,6 +7,14 @@ import webpush from 'web-push'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+var subscriptions = []
+
+function notifyAll() {
+    subscriptions.forEach(element => {
+        webpush.sendNotification(element, JSON.stringify({ title: 'Gate Status' }))
+            .catch(err => console.log(err))
+    });
+}
 
 const app = express()
 
@@ -31,18 +39,16 @@ app.get('/api', (_, res) => res.send({ state: state }))
 app.post('/api', (req, res) => {
     state = req.body.state
     res.send({ state: state })
-    const payload = JSON.stringify({ title: 'Gate Status' })
-    webpush.sendNotification(subscription, payload).catch(err => console.log(err))
+    notifyAll()
     // console.log(subscription)
 })
 
 app.post('/subscribe', (req, res) => {
-    subscription = req.body
-
+    subscriptions.push(req.body)
     res.status(201).json({})
 
-    const payload = JSON.stringify({ title: 'Gate Status' })
+    //const payload = JSON.stringify({ title: 'Gate Status' })
 
-    webpush.sendNotification(subscription, payload).catch(err => console.log(err))
+    // webpush.sendNotification(subscription, payload).catch(err => console.log(err))
     // console.log(subscription)
 })
