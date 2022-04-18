@@ -43,7 +43,7 @@ app.post('/api', (req, res) => {
     state = req.body.state
     res.send({ state: state })
     if (req.body.state == 'false') {
-        notifyAll("The gate is open more than 5 minutes!")
+        notifyAll("The gate is open for more than 5 minutes!")
         console.log("POST /api false is requested!")
     } else {
         notifyAll("The gate is now closed, everything is fine!")
