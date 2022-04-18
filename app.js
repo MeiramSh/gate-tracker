@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 5000
 const publicVapidKey = 'BB4HYa1ZLggzGWtKTmvfALPW9sWuFhrjFNZ-5g7YN_Sp5118sWXY5i22GLh5yj9RDVcDTU-x88jNZYBij0HaI84'
 const privateVapidKey = 'filYXFJnCKhYcz79gUKSYvzdrEX_-0nIh37uSMDnWxg'
 
-let state = false
+let state = 'true'
 webpush.setVapidDetails('mailto:test@test.com', publicVapidKey, privateVapidKey)
 
 app.use(express.json())
@@ -37,18 +37,18 @@ console.log('Server started at http://localhost:' + PORT);
 app.get('/api', (_, res) => res.send({ state: state }))
 app.post('/api', (req, res) => {
     if (state == req.body.state) {
+        console.log(`POST /api ${state} is requested!`)
         res.send({ state: state })
         return
     }
     state = req.body.state
     res.send({ state: state })
-    if (req.body.state == 'false') {
-        notifyAll("The gate is open for more than 5 minutes!")
-        console.log("POST /api false is requested!")
+    if (state == 'false') {
+        notifyAll('The gate is open for more than 5 minutes!')
     } else {
-        notifyAll("The gate is now closed, everything is fine!")
-        console.log("POST /api true is requested!")
+        notifyAll('The gate is now closed, everything is fine!')
     }
+    console.log(`POST /api ${state} is requested!`)
     // console.log(subscription)
 })
 
