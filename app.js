@@ -9,9 +9,9 @@ const __dirname = dirname(__filename);
 
 const subscriptions = new Set()
 
-function notifyAll() {
+function notifyAll(msg) {
     subscriptions.forEach(element => {
-        webpush.sendNotification(element, JSON.stringify({ title: 'Gate Status' }))
+        webpush.sendNotification(element, JSON.stringify({ title: 'Gate Status', message: msg }))
             .catch(err => console.log(err))
     });
 }
@@ -36,19 +36,30 @@ console.log('Server started at http://localhost:' + PORT);
 
 app.get('/api', (_, res) => res.send({ state: state }))
 app.post('/api', (req, res) => {
+    if (state == req.body.state) {
+        res.send({ state: state })
+        return
+    }
     state = req.body.state
     res.send({ state: state })
-    notifyAll()
+    if (req.body.state == 'false') {
+        notifyAll("The gate is open more than 5 minutes!")
+        console.log("POST /api false is requested!")
+    } else {
+        notifyAll("The gate is now closed, everything is fine!")
+        console.log("POST /api true is requested!")
+    }
     // console.log(subscription)
 })
 
 app.post('/subscribe', (req, res) => {
+    console.log('Subscription requested')
     subscriptions.add(req.body)
     res.status(201).json({})
     subscriptions.forEach(element => {
         console.log(element)
     })
-    console.log('subscription requested')
+    console.log('Subscription is done.')
     //const payload = JSON.stringify({ title: 'Gate Status' })
 
     // webpush.sendNotification(subscription, payload).catch(err => console.log(err))
