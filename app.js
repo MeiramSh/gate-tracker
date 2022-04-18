@@ -44,9 +44,9 @@ app.post('/api', (req, res) => {
     state = req.body.state
     res.send({ state: state })
     if (state == 'false') {
-        notifyAll('The gate is open')
+        notifyAll('The gate is open!')
     } else {
-        notifyAll('The gate is closed')
+        notifyAll('The gate is closed!')
     }
     console.log(`POST /api ${state} is requested!`)
     // console.log(subscription)
