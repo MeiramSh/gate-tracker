@@ -30,9 +30,6 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, 'client')))
 app.listen(PORT)
 console.log('Server started at http://localhost:' + PORT);
-// app.get('/', function (_, res) {
-//     res.sendFile(path.join(__dirname, 'client'))
-// })
 
 app.get('/api', (_, res) => res.send({ state: state }))
 app.post('/api', (req, res) => {
@@ -49,7 +46,6 @@ app.post('/api', (req, res) => {
         notifyAll('The gate is closed!')
     }
     console.log(`POST /api ${state} is requested!`)
-    // console.log(subscription)
 })
 
 app.post('/subscribe', (req, res) => {
@@ -60,8 +56,4 @@ app.post('/subscribe', (req, res) => {
         console.log(element)
     })
     console.log('Subscription is done.')
-    //const payload = JSON.stringify({ title: 'Gate Status' })
-
-    // webpush.sendNotification(subscription, payload).catch(err => console.log(err))
-    // console.log(subscription)
 })
