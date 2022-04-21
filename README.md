@@ -1,4 +1,5 @@
 # Gate Tracker
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/8--knM734hU/0.jpg)](https://www.youtube.com/watch?v=8--knM734hU)
 
 The **Gate Tracker** is an app to track the state of the garage gate via mobile phone.
 You can monitor gate status at any point of the globe via the web application.
