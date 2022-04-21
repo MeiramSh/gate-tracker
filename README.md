@@ -24,6 +24,15 @@ The API could be extended so that we could close and open the gate remotely via 
 Also, other than gates, we can use this system to monitor and control windows, electricity, heating,
 air conditioning, and many more.
 
+## Materials and Methods
+1.	Arduino Uno and breadboard. 
+2.	Ethernet Shield and ethernet cable.
+3.	Ultrasonic Sonar for detecting the current state of the garage gate.
+4.	1 Dip Switch 8 for allowing the notification flow.
+5.	Wires.
+6.	Resistor to connect the switch.
+7.	Paperboard for building the garage simulation.
+
 ## Description
 
 The microcontroller we used is Arduino Uno with Ethernet Shield. We send data using a web client interface
@@ -32,6 +41,9 @@ provided by Ethernet.h library. You can look for more details in `WebClient.ino`
 The web server is Node.js server, written in JavaScript in `app.js` file. It provides an API for getting and setting the
 gate status and subscribing for notifications. A simple static web page is needed for the users to subscribe 
 for notifications. The client functionality is implemented in `/client` folder.
+
+## Schematic illustration of the Gate Tracker
+![schamatic](/img/schmatic.jpg)
 
 # Authors
 Alisher Nurmukhanov
