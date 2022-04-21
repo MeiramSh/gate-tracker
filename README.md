@@ -47,13 +47,13 @@ for notifications. The client functionality is implemented in `/client` folder.
   <img src="/img/schematic.jpg" />
 </p>
 
-<p align="center">
+<p align="center" >
   <img src="/img/demonstration.jpg" />
 </p>
 <p align="center">
-  <img src="/img/notification.jpg" />
+  <img src="/img/notification.jpg" width="200"/>
 </p>
-<p align="center">
+<p align="center" >
   <img src="/img/client.jpg" />
 </p>
 
