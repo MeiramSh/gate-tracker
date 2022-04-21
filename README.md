@@ -1,4 +1,4 @@
-The Gate Tracker is an app to track the state of the garage gate via mobile phone.
+The ***Gate Tracker*** is an app to track the state of the garage gate via mobile phone.
 You can monitor gate status at any point of the globe via the web application.
 
 Gate Tracker is a minimal example of how IoT can be integrated into the Smart House System.
@@ -10,7 +10,7 @@ the webserver.
 Once the webserver gets the status of the gate from the microcontroller it sends a push notification
 for the subscribed users.
 
-While this system is simple, the idea can be extended to much featureful 
+While this system is simple, the _idea_ can be extended to much greater and featureful 
 application. 
 The API could be extended so that we could close and open the gate remotely via the web application.
 Also, other than gates, we can use this system to monitor and control windows, electricity, heating,
