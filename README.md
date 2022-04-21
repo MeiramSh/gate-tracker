@@ -51,8 +51,8 @@ for notifications. The client functionality is implemented in `/client` folder.
   <img src="/img/demonstration.jpg" />
 </p>
 <p align="center">
-  <img src="/img/notification.jpg" width="300"/>
-  <img src="/img/client.jpg" width="300"/>
+  <img src="/img/notification.jpg" width="500"/>
+  <img src="/img/client.jpg" width="500"/>
 </p>
 
 # Authors
