@@ -42,9 +42,19 @@ The web server is Node.js server, written in JavaScript in `app.js` file. It pro
 gate status and subscribing for notifications. A simple static web page is needed for the users to subscribe 
 for notifications. The client functionality is implemented in `/client` folder.
 
-## Schematic illustration of the Gate Tracker
+## Schematic illustration and Demonstration
 <p align="center">
   <img src="/img/schematic.jpg" />
+</p>
+
+<p align="center">
+  <img src="/img/demonstration.jpg" />
+</p>
+<p align="center">
+  <img src="/img/notification.jpg" />
+</p>
+<p align="center">
+  <img src="/img/client.jpg" />
 </p>
 
 # Authors
