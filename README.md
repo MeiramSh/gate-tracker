@@ -43,7 +43,9 @@ gate status and subscribing for notifications. A simple static web page is neede
 for notifications. The client functionality is implemented in `/client` folder.
 
 ## Schematic illustration of the Gate Tracker
-![schematic](/img/schematic.jpg)
+<p align="center">
+  <img src="/img/schematic.jpg" />
+</p>
 
 # Authors
 Alisher Nurmukhanov
