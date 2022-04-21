@@ -1,7 +1,9 @@
+# Gate Tracker
+
 The ***Gate Tracker*** is an app to track the state of the garage gate via mobile phone.
 You can monitor gate status at any point of the globe via the web application.
 
-# Purpose
+## Purpose
 
 Gate Tracker is a minimal example of how IoT can be integrated into the Smart House System.
 
