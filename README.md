@@ -37,7 +37,7 @@ air conditioning, and many more.
 ## Description
 
 The microcontroller we used is Arduino Uno with Ethernet Shield. We send data using a web client interface
-provided by Ethernet.h library. You can look for more details in `WebClient.ino` file. 
+provided by `Ethernet.h` library. You can look for more details in `WebClient.ino` file. 
 
 The web server is Node.js server, written in JavaScript in `app.js` file. It provides an API for getting and setting the
 gate status and subscribing for notifications. A simple static web page is needed for the users to subscribe 
