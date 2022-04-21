@@ -1,6 +1,8 @@
 The ***Gate Tracker*** is an app to track the state of the garage gate via mobile phone.
 You can monitor gate status at any point of the globe via the web application.
 
+# Purpose
+
 Gate Tracker is a minimal example of how IoT can be integrated into the Smart House System.
 
 A microcontroller with a proximity sensor and access to the Internet is placed 
@@ -23,6 +25,9 @@ The web server is Node.js server, written in JavaScript in app.js file. It provi
 gate status and subscribing for notifications. A simple static web page is needed for the users to subscribe 
 for notifications. The client functionality is implemented in /client folder.
 
-
-
+# Authors
+Alisher Nurmukhanov
+Sabina Seitzhan
+Raiymbek Yeslyam
+Meiram Shunshalin
 
