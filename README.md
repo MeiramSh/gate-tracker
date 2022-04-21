@@ -44,15 +44,15 @@ for notifications. The client functionality is implemented in `/client` folder.
 
 ## Schematic illustration and Demonstration
 <p align="center">
-  <img src="/img/schematic.jpg" />
+  <img src="/img/schematic.jpg" width="900"/>
 </p>
 
 <p align="center" >
-  <img src="/img/demonstration.jpg" />
+  <img src="/img/demonstration.jpg" width="900"/>
 </p>
 <p align="center">
-  <img src="/img/notification.jpg" width="500"/>
-  <img src="/img/client.jpg" width="500"/>
+  <img src="/img/notification.jpg" width="450"/>
+  <img src="/img/client.jpg" width="450"/>
 </p>
 
 # Authors
